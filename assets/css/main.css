@@ -78,7 +78,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #ffffff; }
+  background: #000000; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -101,7 +101,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #7f888f;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
@@ -122,16 +122,16 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #19191b;
+  color: #bfbfbf;
   text-decoration: none; }
   a:hover {
-    border-bottom-color: #19191b;
-    color: #19191b !important; }
+    border-bottom-color: #bfbfbf;
+    color: #bfbfbf !important; }
     a:hover strong {
       color: inherit; }
 
 strong, b {
-  color: #3d4449;
+  color: #bfbfbf;
   font-weight: 600; }
 
 em, i {
@@ -146,7 +146,7 @@ p {
   text-align: justify}
 
 h1, h2, h3, h4, h5, h6 {
-  color: #3d4449;
+  color: #bfbfbf;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   line-height: 1.5;
@@ -1083,8 +1083,8 @@ select {
   padding-right: 2.75em;
   text-overflow: ellipsis; }
   select option {
-    color: #3d4449;
-    background: #ffffff; }
+    color: #bfbfbf;
+    background: #000000; }
   select:focus::-ms-value {
     background-color: transparent; }
   select::-ms-expand {
@@ -1156,7 +1156,7 @@ input[type="radio"] {
   input[type="radio"]:checked + label:before {
     background: #3d4449;
     border-color: #3d4449;
-    color: #ffffff;
+    color: #000000;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
@@ -1918,7 +1918,7 @@ button,
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
-    color: #7f888f;
+    color: #ffffff;
     content: '\f002';
     cursor: default;
     display: block;
@@ -1947,7 +1947,7 @@ button,
   -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-  background-color: #f5f6f7;
+  background-color: #000000; !importante;
   font-size: 0.9em;
   position: relative;
   width: 26em; }
@@ -1968,7 +1968,7 @@ button,
         margin-bottom: 0;
         padding-bottom: 0; }
     #sidebar > .inner > .alt {
-      background-color: #eff1f2;
+      background-color: #ffffff;
       border-bottom: 0;
       margin: -2.22222em 0 4.44444em -2.22222em;
       padding: 2.22222em;
@@ -2073,7 +2073,7 @@ button,
       text-indent: 7.25em;
       width: 7.25em; }
       #sidebar .toggle:before {
-        color: #7f888f;
+        color: #ffffff;
         margin-left: -0.0625em;
         margin-top: -0.25em;
         font-size: 1.1rem;
@@ -2206,7 +2206,7 @@ button,
 
 /* Footer */
 #footer .copyright {
-  color: #9fa3a6;
+  color: #ffffff;
   font-size: 0.9em; }
   #footer .copyright a {
     color: inherit; }
@@ -2217,7 +2217,7 @@ button,
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #3d4449;
+  color: #ffffff;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   letter-spacing: 0.075em;
@@ -2233,7 +2233,7 @@ button,
     font-size: 0.9em;
     padding: 0.625em 0; }
     #menu ul a:hover, #menu ul span:hover {
-      color: #19191b; }
+      color: #Bfbfbf; }
     #menu ul a.opener, #menu ul span.opener {
       -moz-transition: color 0.2s ease-in-out;
       -webkit-transition: color 0.2s ease-in-out;
@@ -2263,7 +2263,7 @@ button,
         position: absolute;
         right: 0; }
       #menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
-        color: #19191b; }
+        color: #000000; }
       #menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
         display: block; }
       #menu ul a.opener.active:before, #menu ul span.opener.active:before {
@@ -2277,7 +2277,7 @@ button,
   margin: 0.5em 0 0 0;
   padding: 0.5em 0 0 0; }
   #menu > ul > li > ul {
-    color: #9fa3a6;
+    color: #ffffff;
     display: none;
     margin: 0.5em 0 1.5em 0;
     padding-left: 1em; }
