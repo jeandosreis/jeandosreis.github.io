@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações - Jean dos Reis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="pub_style.css">
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language-select").value;
+            if (lang === "en") {
+                document.getElementById("menu-about").innerText = "About";
+                document.getElementById("menu-publications").innerText = "Publications";
+                document.getElementById("menu-weather").innerText = "Weather Forecast";
+                document.getElementById("publications-title").innerText = "Publications";
+                document.getElementById("search-placeholder").innerText = "Search...";
+                document.getElementById("type").innerText = "Type";
+                document.getElementById("date").innerText = "Date";
+                } else if (lang === "es") {
+                document.getElementById("menu-about").innerText = "Acerca de";
+                document.getElementById("menu-publications").innerText = "Publicaciones";
+                document.getElementById("menu-weather").innerText = "Pronóstico del Tiempo";
+                document.getElementById("publications-title").innerText = "Publicaciones";
+                document.getElementById("search-placeholder").innerText = "Buscar...";
+                document.getElementById("type").innerText = "Tipo";
+                document.getElementById("date").innerText = "Fecha";
+                } else {
+                document.getElementById("menu-about").innerText = "Sobre";
+                document.getElementById("menu-publications").innerText = "Publicações";
+                document.getElementById("menu-weather").innerText = "Previsão do Tempo";
+                document.getElementById("publications-title").innerText = "Publicações";
+                document.getElementById("search-placeholder").innerText = "Pesquisar...";
+                document.getElementById("type").innerText = "Tipo";
+                document.getElementById("date").innerText = "Data";
+                }
+            }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" id="name">Jean dos Reis</div>
+        <div class="menu">
+            <a href="index.html" id="menu-about">Sobre</a>
+            <a href="publication.html" id="menu-publications">Publicações</a>
+            <a href="weather.html" id="menu-weather">Previsão do Tempo</a>
+        </div>
+        <div class="language">
+            <span><i class="fa-solid fa-earth-americas"></i></span>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2 id="publications-title">Publicações</h2>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Pesquisar...">
+                <select id="type">
+                    <option value="all">Tipo</option>
+                </select>
+                <select id="date">
+                    <option value="latest">Data</option>
+                </select>
+            </div>
+            <div class="publication-list">
+                <div class="publication">
+                    <h3>Climatology of the dynamic and thermodynamic features of upper tropospheric cyclonic vortices in Northeast Brazil</h3>
+                    <p><b>Reis, Jean Souza dos</b>; Gonçalves, Weber Andrade; Mendes, David. <br>
+                    <i>Climate Dynamics, 2021</i></p>
+                    <a href="https://doi.org/10.1007/s00382-021-05873-y" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+                <div class="publication">
+                    <h3>Evaluation of the Integrated Multi-SatellitE Retrievals for the Global Precipitation Measurement (IMERG) Product in the São Francisco Basin (Brazil)</h3>
+                    <p>Rodrigues, Daniele Tôrres; Santos e Silva, Cláudio Moisés; <b>Dos Reis, Jean Souza</b>; et al.<br>
+                    <i>Water, 2021</i></p>
+                    <a href="https://doi.org/10.3390/w13192714" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+                <div class="publication">
+                    <h3>Evaluation of atmospheric aerosols in the metropolitan area of São Paulo simulated by the regional EURAD-IM model on high-resolution</h3>
+                    <p>De Souza Fernandes Duarte, Ediclê; <b>Dos Reis, Jean Souza</b>; et al.<br>
+                    <i>Atmospheric Pollution Research, 2020</i></p>
+                    <a href="https://doi.org/10.1016/j.apr.2020.12.006" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+                <div class="publication">
+                    <h3>Environmental and biophysical controls of evapotranspiration from Seasonally Dry Tropical Forests (Caatinga) in the Brazilian Semiarid</h3>
+                    <p>Valentim, T. M.; <b>Dos Reis, J. S.</b> et al.<br>
+                    <i>Agricultural and Forest Meteorology, 2020</i></p>
+                    <a href="https://doi.org/10.3390/w13192714" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+                <div class="publication">
+                    <h3>Assessment of SITE for CO2 and Energy Fluxes Simulations in a Seasonally Dry Tropical Forest (Caatinga Ecosystem)</h3>
+                    <p>Mendes, Keila R.; <b>Dos Reis, Jean Souza</b> et al.<br>
+                    <i>Forests, 2021</i></p>
+                    <a href="https://doi.org/10.3390/f12010086" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+                <div class="publication">
+                    <h3>Pluviometric regions and health in Rio Grande do Norte</h3>
+                    <p>Silva, Pollyanne Evangelista da; <b>Reis, Jean Souza dos</b> et al.<br>
+                    <i>Confins (Paris), 2018</i></p>
+                    <a href="https://doi.org/10.4000/confins.12855" class="doi">DOI</a>
+                    <hr class="separator">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Estilo geral */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: white;
+}
+
+/* Navbar fixa */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f8f9fa;
+padding: 15px 50px;
+border-bottom: 1px solid #ddd;
+z-index: 1000;
+}
+
+/* Logo da navbar */
+.navbar .logo {
+font-size: 28px;
+font-weight: bold;
+}
+
+/* Menu da navbar */
+.navbar .menu {
+display: flex;
+gap: 0px;
+}
+
+.navbar .menu a {
+text-decoration: none;
+color: black;
+font-size: 18px;
+padding: 10px 25px;
+border-right: 1px solid #bbb;
+transition: background-color 0.3s;
+}
+
+.navbar .menu a:last-child {
+border-right: none;
+}
+
+.navbar .menu a:hover, 
+.navbar .menu a.active {
+background-color: #dcdcdc;
+}
+
+/* Seletor de idioma */
+.language {
+position: relative;
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+padding: 5px 60px;
+border-radius: 5px;
+background-color: #f8f9fa;
+}
+
+.language select {
+border: none;
+background: transparent;
+font-size: 16px;
+cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+width: 250px;
+background-color: #222;
+color: white;
+position: fixed;
+top: 50px;
+left: 0;
+height: 100vh;
+padding-top: 20px;
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0;
+}
+
+.sidebar ul li {
+padding: 15px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.sidebar ul li:hover {
+background-color: #444;
+}
+
+.sidebar ul li a {
+text-decoration: none;
+color: white;
+display: flex;
+align-items: center;
+}
+
+.sidebar ul li i {
+margin-right: 10px;
+}
+
+.submenu {
+display: none;
+background: #333;
+padding-left: 20px;
+}
+
+.submenu.active {
+display: block;
+}
+
+/* Conteúdo */
+.content {
+margin-left: 260px;
+padding: 20px;
+margin-top: 60px;
+}
+
+h1 {
+color: #333;
+}
+.tabs {
+display: flex;
+border-bottom: 2px solid #444;
+}
+.tab-button {
+background-color: #333;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+margin-right: 5px;
+}
+.tab-button.active {
+background-color: #555;
+}
+.tab-content {
+display: none;
+padding: 20px;
+border: 2px solid #444;
+background-color: #222;
+color: white;
+text-align: center;
+}
+.tab-content.active {
+display: block;
+}
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+position: relative;
+}
+.image-container img {
+width: 60%;
+height: auto;
+border: 2px solid #444;
+}
+.nav-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+font-size: 20px;
+}
+.nav-button.left {
+left: 10px;
+}
+.nav-button.right {
+right: 10px;
+}

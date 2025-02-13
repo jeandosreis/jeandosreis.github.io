@@ -1,0 +1,154 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Navbar fixa */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px 50px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+/* Logo da navbar */
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Menu da navbar */
+.navbar .menu {
+    display: flex;
+    gap: 0px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-right: 1px solid #bbb;
+    transition: background-color 0.3s;
+}
+
+.navbar .menu a:last-child {
+    border-right: none;
+}
+
+.navbar .menu a:hover, 
+.navbar .menu a.active {
+    background-color: #dcdcdc;
+}
+
+/* Seletor de idioma */
+.language {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 60px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.language select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding: 100px 0 50px 0;
+}
+
+/* Estilo da seção de publicações */
+.content {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Título da página */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Filtros de pesquisa */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input, 
+.filters select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Lista de publicações */
+.publication-list {
+    width: 100%;
+}
+
+/* Estilo de cada publicação */
+.publication {
+    margin-bottom: 20px;
+}
+
+.publication h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.publication p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.publication i {
+    font-style: italic;
+    color: #666;
+}
+
+.publication .doi {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.publication .doi:hover {
+    text-decoration: underline;
+}
+
+/* Linha separadora entre publicações */
+.separator {
+    border: none;
+    border-top: 1px solid #bbb;
+    margin: 20px 0;
+}
