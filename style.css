@@ -1,0 +1,183 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 15px 50px;
+            border-bottom: 1px solid #ddd; /* é onde aumenta ou diminui a linha da navbar */
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 0px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-right: 1px solid #bbb;
+            transition: background-color 0.3s;
+        }
+        .navbar .menu a:last-child {
+            border-right: none;
+        }
+		.navbar .menu a:hover, .navbar .menu a.active {
+			background-color: #dcdcdc;
+		}
+        .language {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 5px 60px;
+            border-radius: 5px;
+            background-color: #f8f9fa; /* Alterado de branco para cinza médio */
+        }
+		
+		.language select {
+			border: none;
+			background: transparent;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+        .language:hover .language-menu {
+            display: block;
+        }
+        .language span {
+            font-size: 18px;
+        }
+		.language-menu {
+			display: none;
+			position: absolute;
+			top: 50px; /* Ajuste para manter dentro da navbar */
+			right: 10px; /* Evita sair para fora do site */
+			background: white;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			padding: 5px 0;
+			min-width: 150px;
+			text-align: left;
+			z-index: 1000; /* Aumentado para garantir sobreposição correta */
+		}
+        .language-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .language-menu a:hover {
+            background-color: #e0e0e0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            margin: auto;
+            padding: 30px 0;
+            align-items: center;
+        }
+        .sidebar {
+            width: 20%;
+            text-align: center;
+            padding: 50px;
+        }
+        .sidebar img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .sidebar h1 {
+            font-size: 32px;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .icons a {
+            font-size: 24px;
+            text-decoration: none;
+            color: black;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+			margin-top: 0px; /* Ajuste para reduzir o espaço extra abaixo da navbar */
+        }
+        .content h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .content p {
+            font-size: 22px;
+            line-height: 2.2;
+		    margin-bottom: 50px; /* Ajuste para espaçamento maior */
+        }
+		.education {
+			margin-top: 50px; /* Espaço entre About Me e Educação */
+		}
+
+		.education h3 {
+			font-size: 24px;
+			margin-bottom: 15px;
+			font-weight: bold;
+		}
+
+		.education ul {
+			list-style: none; /* Remove as bolinhas da lista */
+			padding: 0;
+		}
+
+		.education li {
+			display: flex;
+			align-items: flex-start; /* Alinha os itens ao topo */
+			gap: 15px; /* Espaço entre o ícone e o texto */
+			margin-bottom: 10px; /* Espaço entre cada formação */
+		}
+
+		.education i {
+			font-size: 20px;
+			color: black;
+		}
+
+		.degree {
+			font-size: 16px;
+			font-weight: bold;
+			display: block;
+		}
+
+		.institution {
+			font-size: 14px;
+			color: #666;
+			display: block; /* Garante que fique abaixo do título */
+			margin-top: 5px;
+		}
