@@ -1,257 +1,101 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="pt-br">
-	<head>
-		<title>Jean dos Reis</title>
-		<link rel="shortcut icon" type="imagex/png" href="images/avatar6.ico">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Jean dos Reis</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<span id='topo'></span>
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Website</strong> pessoal</a>
-									<ul class="icons">
-										<li><a href="https://orcid.org/0000-0002-1674-7518" class="icon fa-brands fa-orcid"><span >Orcid</span></a></li>
-										<li><a href="https://github.com/jeandosreis" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="https://www.researchgate.net/profile/Jean-Reis-2" class="icon brands fa-researchgate"><span class="label">Research Gate</span></a></li>
-										<li><a href="https://www.instagram.com/jeandsreis/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://www.linkedin.com/in/jean-dos-reis-83aab1189/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-										<li><a href="https://scholar.google.com.br/citations?user=QbfsnogAAAAJ&hl=pt-BR" class="icon brands fa-google-scholar"><span class="label">Google Scholar</span></a></li>
-									</ul>
-								</header>
-								
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Jean dos Reis</h1>
-											<p>Quem sou eu?</p>
-										</header>
-										<img src="images/avatar7.png" width="380" height="380" align="right">
-										<p2 align="justify">
-											 Pesquisador pós-doutor no Centro de Integração de Dados e Conhecimentos para Saúde (CIDACS/Fiocruz-Bahia), doutor e mestre em Ciências Climáticas pela Universidade Federal do Rio Grande do Norte (PPGCC, UFRN), com especialização em análise e simulação de eventos extremos e graduado em Meteorologia pela Universidade Federal do Pará (UFPA). Atuei como pesquisador no Departamento de pesquisa e Desenvolvimento no Instituto Nacional Uruguaio de Meteorologia (INUMET-Uruguai) e no Instituto SENAI de Energias Renováveis (ISI-ER) e como professor substituto no Departamento de Ciências Atmosféricas e Climáticas (DCAC, UFRN).
-											 Tenho experiência nas áreas de mudanças climáticas, desastres naturais, eventos extremos, climatologia, sensoriamento remoto, energias renováveis e meteorologia sinótica.
-											 Faço parte de diversos grupos de estudos como INCT Klimapolis, Grupo de Estudos de Observação e Modelagem da Interface Biosfera-Atmosfera (GEOMIBA, UFRN), Modelagem Climática e de Sistemas Complexos (UFRN), Climatologia Teórica e Aplicada (CTA, UFAL), Climatologia Estatística (CLIMEST, UFPI) e o Grupo de Pesquisa de Modelagem e Observação de Química da Atmosfera (GP-MOQA).
-											 Atualmente, compõe a equipe de desenvolvimento da Plataforma de Clima e Meio Ambiente no CIDACS, capaz de gerar novos conhecimentos sobre as relações entre clima e saúde.</p2>
-									</div>
-									<!--span class="img-arredondada">
-										<img src="images/avatar2.jpg" alt=""  height="50" width="50"/>
-									</span-->
-								</section>
-
- 
-<!-- Skills-->
-<section class="page-section" id="services">
-	<div class="container">
-		<div class="text-center">
-			<h2 class="section-heading text-uppercase">Skills</h2>
-			<h3 class="section-subheading text-muted">Linguagens e ferramentas.</h3>
-		</div>
-
-		<div class="row">
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language-select").value;
+            if (lang === "en") {
+                document.getElementById("menu-about").innerText = "About";
+                document.getElementById("menu-publications").innerText = "Publications";
+                document.getElementById("menu-weather").innerText = "Weather Forecast";
+                document.getElementById("name").innerText = "Jean dos Reis";
+                document.getElementById("position").innerText = "Postdoctoral Researcher";
+                document.getElementById("about").innerText = "About Me";
+                document.getElementById("about-text").innerText = 
+                    "Postdoctoral researcher at the Center for Data Integration and Knowledge for Health (CIDACS/Fiocruz-Bahia),\n" +
+                    "PhD and Master's degree in Climate Sciences from the Federal University of Rio Grande do Norte (PPGCC, UFRN),\n" +
+                    "specializing in the analysis and simulation of extreme events and graduated in Meteorology from the Federal University of Pará (UFPA).";
+            } else if (lang === "pt") {
+                document.getElementById("menu-about").innerText = "Sobre";
+                document.getElementById("menu-publications").innerText = "Publicações";
+                document.getElementById("menu-weather").innerText = "Previsão do Tempo";
+                document.getElementById("name").innerText = "Jean dos Reis";
+                document.getElementById("position").innerText = "Pesquisador Pós-doutor";
+                document.getElementById("about").innerText = "Sobre Mim";
+                document.getElementById("about-text").innerText = 
+                    "Pesquisador pós-doutor no Centro de Integração de Dados e Conhecimentos para Saúde (CIDACS/Fiocruz-Bahia),\n" +
+                    "doutor e mestre em Ciências Climáticas pela Universidade Federal do Rio Grande do Norte (PPGCC, UFRN),\n" +
+                    "com especialização em análise e simulação de eventos extremos e graduado em Meteorologia pela Universidade Federal do Pará (UFPA).";
+			} else {
+			    document.getElementById("menu-about").innerText = "Acerca de";
+                document.getElementById("menu-publications").innerText = "Publicaciones";
+                document.getElementById("menu-weather").innerText = "Pronóstico del Tiempo";
+                document.getElementById("name").innerText = "Jean dos Reis";
+                document.getElementById("position").innerText = "Investigador postdoctoral";
+                document.getElementById("about").innerText = "Sobre mí";
+				document.getElementById("about-text").innerText = 
+                    "Investigador postdoctoral en el Centro de Integración de Datos y Conocimiento para la Salud (CIDACS/Fiocruz-Bahia),\n" +
+                    "Doctorado y Maestría en Ciencias del Clima por la Universidad Federal de Rio Grande do Norte (PPGCC, UFRN),\n" +
+                    "con especialización en análisis y simulación de eventos extremos y licenciado en Meteorología por la Universidad Federal de Pará.";
+            }
+        }
 		
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-python.png" alt="" height="62" width="62"/></span><h3><br>Python</br></h3>Python é uma linguagem de programação que permite trabalhar rapidamente e integrar sistemas de forma mais eficaz.</p>
-			</div>
-			
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-R.jpg" alt="" height="62" width="62"/></span><h3><br>R project</br></h3>R é um ambiente de software livre para computação estatística e gráficos. Compila e roda em uma ampla variedade de plataformas UNIX, Windows e MacOS.</p>
-			</div>
+		function setActiveMenu(id) {
+			var menuItems = document.querySelectorAll('.navbar .menu a');
+			menuItems.forEach(item => item.classList.remove('active'));
+			document.getElementById(id).classList.add('active');
+}
 
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/hysplit.png" alt="" height="62" width="62"/></span><h3><br>HYSPLIT</br></h3>O HYSPLIT (Hybrid Single Particle Lagrangian Integrated Trajectory) é um modelo amplamente utilizado para calcular trajetórias de partículas, dispersão e deposição de poluentes na atmosfera.</p>
-			</div>
-
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-pbi.png" alt="" height="62" width="62"/></span><h3><br>Power BI</br></h3>O Power BI é uma coleção de serviços de software, aplicativos e conectores que trabalham juntos para transformar suas fontes de dados não relacionadas em informações coerentes, visualmente envolventes e interativas.</p>
-			</div>
-			
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-qgis.png" alt="" height="62" width="62"/></span><h3><br>QGIS</br></h3>QGIS é um aplicativo profissional GIS Livre e e de Código Aberto que é construído a partir de Software Livre e de Código Aberto, Free and Open Source Software (FOSS).</p>
-			</div>
-
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-grads.gif" alt="" height="62" width="62"/></span><h3><br>GrADS</br></h3>O Grid Analysis and Display System (GrADS) é uma ferramenta de desktop interativa usada para fácil acesso, manipulação e visualização de dados de ciências da terra.</p>
-			</div>
-			
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-fortran.png" alt="" height="62" width="62"/></span><h3><br>Fortran</br></h3>FORTRAN que significa formula translation é uma linguagem de alto nível (forma de linguagem mais parecida com a linguagem humana), sua versão atual é o "Fortran 95".</p>
-			</div>
-
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/icon-bash.png" alt="" height="62" width="62"/></span><h3><br>Bash</br></h3>Bash é o shell do Projeto GNU. É um shell compatível com sh que incorpora recursos úteis do shell Korn (ksh) e do shell C (csh).</p>
-			</div>
-			
-	</div>
-</section>
-
-
-<!-- Skills-->
-<section class="page-section" id="services">
-	<div class="container">
-		<div class="text-center">
-			<h2 class="section-heading text-uppercase">Clientes</h2>
-			<!--h3 class="section-subheading text-muted">Linguagens e ferramentas que estudo e trabalho.</h3-->
-		</div>
-
-		<div class="col-sm">
 		
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/cliente-1.jpg" alt="" height="62" width="62"/></span><h3><br>Noname Produtora - Belém/PA</br></h3>Análise de dados dos clientes aplicando técnicas de modelagem de dados e Machine Learning para previsão e predição de potencias clientes, redução de gastos e direcionamento de marketing.</p>
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" id="name">Jean dos Reis</div>
+        <div class="menu">
+            <a href="#about" id="menu-about" onclick="setActiveMenu('menu-about')">Sobre</a>
+			<a href="publication.html" id="menu-publications" onclick="setActiveMenu('menu-publications')">Publicações</a>
+			<a href="weather.html" id="menu-weather" onclick="setActiveMenu('menu-weather')">Previsão do Tempo</a>
+
+        </div>
+        <div class="language">
+            <span><i class="fa-solid fa-earth-americas"></i></span>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+				<option value="es">Español</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <img src="images/avatar.png" alt="Minha Foto">
+            <h1 id="name">Jean dos Reis</h1>
+            <h2 id="position">Pesquisador Pós-doutor</h2>
+			<h3><a href="https://cidacs.bahia.fiocruz.br/" target="_blank">CIDACS/Fiocruz Bahia</a></h3>
+			<div class="icons">
+				<a href="https://orcid.org/0000-0002-1674-7518" target="_blank"><i class="fa-brands fa-orcid"></i></a>
+				<a href="https://github.com/jeandosreis" target="_blank"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.researchgate.net/profile/Jean-Reis-2" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
+				<a href="https://www.linkedin.com/in/jean-dos-reis-83aab1189/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://scholar.google.com.br/citations?user=QbfsnogAAAAJ&hl=pt-BR" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
 			</div>
-			
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/cliente-2.jpg" alt="" height="62" width="62"/></span><h3><br>Cornélio caranguejos – Parnaíba/PI</br></h3>Análise espacial para determinar a melhor localização de um novo restaurante na região metropolitana de Parnaíba/PI.</p>
-			</div>
+        </div>
+        <div class="content">
+            <h2 id="about">Sobre Mim</h2>
+            <p id="about-text">
+                Pesquisador pós-doutor no Centro de Integração de Dados e Conhecimentos para Saúde (CIDACS/Fiocruz-Bahia),
+                doutor e mestre em Ciências Climáticas pela Universidade Federal do Rio Grande do Norte (PPGCC, UFRN),
+                com especialização em análise e simulação de eventos extremos e graduado em Meteorologia pela Universidade Federal do Pará (UFPA).
+            </p>
+        </div>
+    </div>
 
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/cliente-3.jpg" alt="" height="62" width="62"/></span><h3><br>Ace Filmes – Belém/PA</br></h3>Avaliação de potencial público da região metropolitana de Belém/PA. Criação de Dashboard para monitoramento contínuo de gastos e orçamentos</p>
-			</div>
-
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/cliente-5.png" alt="" height="62" width="62"/></span><h3><br>CLIMEST - UFPI</br></h3>Análise, processamento e armazenamento de dados ambientais, hidrológicos e climatológicos. Realização de relatórios automatizados através do R. Produção gráfica e data mining utilizando os softwares QGIS, GrADS e Python.</p>
-			</div>
-			
-			<div class="col-6 col-12-small">
-		<p><span class="image left"><img src="images/cliente-4.jpg" alt="" height="62" width="62"/></span><h3><br>CTA - UFAL</br></h3>Realizando análise estatística de banco de dados, data mining e previsão estatística/estocásticas através de programação pelas linguagens R e Python. Elaborando figuras e mapas espaciais através dos softwares GrADS, R, QGIS e Python.</p>
-			</div>
-			
-	</div>
-</section>
-
-
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Exemplos de produtos</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="rexamples.html" class="image"><img src="images/r09.png" alt="" /></a>
-											<h3>R</h3>
-											<p>Alguns exemplos de figuras geradas no programa R.</p>
-											<ul class="actions">
-												<li><a href="rexamples.html" class="button">Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="qgisexamples.html" class="image"><img src="images/qgis01.png" alt="" /></a>
-											<h3>QGIS</h3>
-											<p>Alguns exemplos de figuras geradas no programa QGIS.</p>
-											<ul class="actions">
-												<li><a href="qgisexamples.html" class="button">Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="gradsexamples.html" class="image"><img src="images/grads01.gif" alt="" /></a>
-											<h3>GrADS</h3>
-											<p>Exemplos de figuras geradas no GrADS.</p>
-											<ul class="actions">
-												<li><a href="gradsexamples.html" class="button">Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Python</h3>
-											<p>Em construção.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Mais</a></li>
-											</ul>
-										</article>
-
-									</div>
-								</section>
-								<a align="center" href='#topo'>Voltar ao topo</a>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Busca" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Página inicial</a></li>
-										<li>
-											<span class="opener">Produtos</span>
-											<ul>
-												<li><a href="algoritmo.html">Algoritmos</a></li>
-												<li><a href="rexamples.html">Figuras em R</a></li>
-												<li><a href="gradsexamples.html">Figuras em GrADS</a></li>
-												<li><a href="qgisexamples.html">Figuras em QGIS</a></li>
-											</ul>
-										</li>
-										<li><a href="trabalhosp.html">Trabalhos publicados</a></li>
-										
-										<li>
-											<span class="opener">Sistema de previsão</span>
-											<ul>
-												<li><a href="sistemap.html">Meteograma</a></li>
-												<li><a href="sistemap.html">Campos meteorológicos</a></li>
-												<li><a href="sistemap.html">Climatologia</a></li>
-												<li><a href="sistemap.html">Potencial de VCAN</a></li>
-											</ul>
-										</li>
-										<li><a href="suteis.html">Scripts úteis</a></li>
-										<li><a href="https://drive.google.com/file/d/1U-Z_JdjxRilVwXaudftca4BcZryb5Gt_/view?usp=sharing">Currículo</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Informações</h2>
-									</header>
-									<!--p>Meteorologista<br>Mestre e doutorando em Ciências Climáticas</br><br>http://lattes.cnpq.br/0801184027360772</br><br>https://orcid.org/0000-0002-1674-7518</br></p-->
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">jean.reis@ufrn.br</a></li>
-										<li class="icon solid fa-phone">(84) 997023278</li>
-										<li class="icon solid fa-home">Av. Amintas Barros, 1635<br />
-										Natal, RN, Brasil</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
