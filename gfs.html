@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo - Jean dos Reis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="weather_style.css">
+    <script>
+        function toggleMenu(id) {
+            var menu = document.getElementById(id);
+            menu.classList.toggle("active");
+        }
+
+        function changeLanguage() {
+            var lang = document.getElementById("language-select").value;
+            
+            document.getElementById("menu-about").innerText = (lang === "en") ? "About" : (lang === "es") ? "Acerca de" : "Sobre";
+            document.getElementById("menu-publications").innerText = (lang === "en") ? "Publications" : (lang === "es") ? "Publicaciones" : "Publicações";
+            document.getElementById("menu-weather").innerText = (lang === "en") ? "Weather Forecast" : (lang === "es") ? "Pronóstico del Tiempo" : "Previsão do Tempo";
+
+            document.getElementById("sidebar-forecast").innerHTML = `<i class="fa-solid fa-cloud-sun"></i> ${(lang === "en") ? "Weather Forecast" : (lang === "es") ? "Pronóstico del Tiempo" : "Previsão do Tempo"}`;
+            document.getElementById("sidebar-climate").innerHTML = `<i class="fa-solid fa-globe"></i> ${(lang === "en") ? "Climate Forecast" : (lang === "es") ? "Pronóstico Climático" : "Previsão Climática"}`;
+            document.getElementById("sidebar-aiv").innerHTML = `<i class="fa-solid fa-chart-line"></i> AIV`;
+            document.getElementById("sidebar-heatwave").innerHTML = '<i class="fa-solid fa-temperature-high"></i> ' + ((lang === "en") ? "Heatwave" : (lang === "es") ? "Ola de Calor" : "Onda de Calor");
+        }
+		
+        let currentImageIndex = { "tab1": 1, "tab2": 1, "tab3": 1 };
+        const maxImages = 9;
+
+        function changeImage(tab, direction) {
+            let variable = document.getElementById("variable-select").value;
+            currentImageIndex[tab] += direction;
+            if (currentImageIndex[tab] < 1) currentImageIndex[tab] = maxImages;
+            if (currentImageIndex[tab] > maxImages) currentImageIndex[tab] = 1;
+            document.getElementById("fig-" + tab).src = `${variable}/fig${currentImageIndex[tab]}.png`;
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+		
+    </script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Jean dos Reis</div>
+        <div class="menu">
+            <a href="index.html" id="menu-about">Sobre</a>
+			<a href="publication.html" id="menu-publications">Publicações</a>
+            <a href="weather.html" id="menu-weather">Previsão do Tempo</a>
+        </div>
+        <div class="language">
+            <span><i class="fa-solid fa-earth-americas"></i></span>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li onclick="toggleMenu('forecast-menu')">
+                <a href="#" id="sidebar-forecast"><i class="fa-solid fa-cloud-sun"></i> Previsão do Tempo</a>
+                <i class="fa-solid fa-chevron-down"></i>
+            </li>
+            <ul id="forecast-menu" class="submenu">
+                <li><a href="weather.html">Imagens de satélite</a></li>
+                <li><a href="gfs.html">GFS</a></li>
+            </ul>
+
+            <li onclick="toggleMenu('climate-menu')">
+                <a href="#" id="sidebar-climate"><i class="fa-solid fa-globe"></i> Previsão Climática</a>
+                <i class="fa-solid fa-chevron-down"></i>
+            </li>
+            <ul id="climate-menu" class="submenu">
+                <li><a href="#">Análises</a></li>
+                <li><a href="#">Modelos</a></li>
+            </ul>
+
+            <li><a href="#"><i class="fa-solid fa-chart-line"></i> AIV</a></li>
+			
+            <li><a href="#" id="sidebar-heatwave"><i class="fa-solid fa-temperature-high"></i> Onda de Calor</a></li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content">
+        <h1>Bem-vindo à página de Previsão do Tempo</h1>
+        <p>Aqui serão exibidas as figuras geradas.</p>
+              
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">Temperatura (°C)</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Umidade Relativa (%)</button>
+            <button class="tab-button" onclick="openTab(event, 'tab3')">CAPE (J/kg)</button>
+        </div>
+        
+        <div id="tab1" class="tab-content active">
+            <div class="image-container">
+                <button class="nav-button left" onclick="changeImage('tab1', -1)">&#9664;</button>
+                <img id="fig-tab1" src="images/fig4.png" alt="Temperatura (°C)">
+                <button class="nav-button right" onclick="changeImage('tab1', 1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <div class="image-container">
+                <button class="nav-button left" onclick="changeImage('tab2', -1)">&#9664;</button>
+                <img id="fig-tab2" src="images/fig5.png" alt="Umidade Relativa (%)">
+                <button class="nav-button right" onclick="changeImage('tab2', 1)">&#9654;</button>
+            </div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <div class="image-container">
+                <button class="nav-button left" onclick="changeImage('tab3', -1)">&#9664;</button>
+                <img id="fig-tab3" src="images/fig6.png" alt="CAPE (J/kg)">
+                <button class="nav-button right" onclick="changeImage('tab3', 1)">&#9654;</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
