@@ -81,8 +81,8 @@
                 <i class="fa-solid fa-chevron-down"></i>
             </li>
             <ul id="forecast-menu" class="submenu">
-                <li><a href="#">Hoje</a></li>
-                <li><a href="#">Próximos Dias</a></li>
+                <li><a href="weather.html">Imagens de satélite</a></li>
+                <li><a href="gfs.html">GFS</a></li>
             </ul>
 
             <li onclick="toggleMenu('climate-menu')">
@@ -104,27 +104,17 @@
     <div class="content">
         <h1>Bem-vindo à página de Previsão do Tempo</h1>
         <p>Aqui serão exibidas as figuras geradas.</p>
-        
-        <div class="variable-selector">
-            <label for="variable-select">Escolha a variável:</label>
-            <select id="variable-select">
-                <option value="temperatura">Temperatura em superfície</option>
-                <option value="vento_umidade">Vento e umidade específica em superfície</option>
-                <option value="cape">CAPE</option>
-                <option value="pressao_msl">Pressão ao Nível Médio do Mar</option>
-            </select>
-        </div>
-        
+              
         <div class="tabs">
-            <button class="tab-button active" onclick="openTab(event, 'tab1')">Previsão Global</button>
-            <button class="tab-button" onclick="openTab(event, 'tab2')">Previsão Regional</button>
-            <button class="tab-button" onclick="openTab(event, 'tab3')">Análises</button>
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">GOES 16 - Infravermelho</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">GOES 16 - Vapor d'água</button>
+            <button class="tab-button" onclick="openTab(event, 'tab3')">GOES 16 - Visível</button>
         </div>
         
         <div id="tab1" class="tab-content active">
             <div class="image-container">
                 <button class="nav-button left" onclick="changeImage('tab1', -1)">&#9664;</button>
-                <img id="fig-tab1" src="temperatura/fig1.png" alt="Figura 1 - Previsão Global">
+                <img id="fig-tab1" src="images/fig1.png" alt="GOES 16 - Infravermelho">
                 <button class="nav-button right" onclick="changeImage('tab1', 1)">&#9654;</button>
             </div>
         </div>
@@ -132,7 +122,7 @@
         <div id="tab2" class="tab-content">
             <div class="image-container">
                 <button class="nav-button left" onclick="changeImage('tab2', -1)">&#9664;</button>
-                <img id="fig-tab2" src="temperatura/fig1.png" alt="Figura 1 - Previsão Regional">
+                <img id="fig-tab2" src="images/fig2.png" alt="GOES 16 - Vapor d'água">
                 <button class="nav-button right" onclick="changeImage('tab2', 1)">&#9654;</button>
             </div>
         </div>
@@ -140,7 +130,7 @@
         <div id="tab3" class="tab-content">
             <div class="image-container">
                 <button class="nav-button left" onclick="changeImage('tab3', -1)">&#9664;</button>
-                <img id="fig-tab3" src="temperatura/fig1.png" alt="Figura 1 - Análises">
+                <img id="fig-tab3" src="images/fig3.png" alt="GOES 16 - Visível">
                 <button class="nav-button right" onclick="changeImage('tab3', 1)">&#9654;</button>
             </div>
         </div>
